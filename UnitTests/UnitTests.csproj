@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0BD0B01B-AC0E-4208-8A2B-D0ED9E865541}</ProjectGuid>
+    <ProjectGuid>{7DC2D231-A067-44B7-9CB6-F3CF57674AD7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DfindTest.Main</RootNamespace>
-    <AssemblyName>DfindTest.Main</AssemblyName>
+    <RootNamespace>DfindTest.UnitTests</RootNamespace>
+    <AssemblyName>DfindTest.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,10 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProblemB.cs" />
-    <Compile Include="ProblemC.cs" />
-    <Compile Include="ProblemA.cs" />
+    <Compile Include="ProblemB_Test.cs" />
+    <Compile Include="ProblemC_Test.cs" />
+    <Compile Include="ProblemA_Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DfindTest\Main.csproj">
+      <Project>{0bd0b01b-ac0e-4208-8a2b-d0ed9e865541}</Project>
+      <Name>Main</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ProblemC_InputFiles\InputFile2.txt" />
+    <Content Include="ProblemC_InputFiles\InputFile1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
